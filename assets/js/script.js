@@ -5,48 +5,235 @@ var correctAnswer1 = document.getElementById('')
 
 
 
+
+var toFinalScore = function() {
+    alert('Final Score');
+};
+
+
+
+
 var toQ5 = function() {
-    alert('toQ2');
+    // remove start quiz section
+    quizSection.innerHTML = '';
+
+    // create 1st question
+    var q5 = document.createElement('section');
+    q5.className = 'quizQuestion';
+    q5.textContent = 'Which method saves data to local storage?';          // update with 1st question as string
+
+    // display 1st question 
+    quizSection.appendChild(q5);
+
+
+    // create 1st question answer choices
+    var q5AnswerA = document.createElement('button');
+        q5AnswerA.setAttribute('id', 'wrong-answer')
+        q5AnswerA.addEventListener('click', function() {
+            alert('Wrong!');
+        });
+
+    var q5AnswerB = document.createElement('button');
+        q5AnswerB.setAttribute('id', 'wrongAnswer1')
+        q5AnswerB.addEventListener('click', function() {
+            alert('Wrong!');
+        });
+
+    var q5AnswerC = document.createElement('button');
+        q5AnswerC.setAttribute('id', 'wrong-answer')
+        q5AnswerC.addEventListener('click', function() {
+            alert('Wrong!');
+        });
+
+    var q5AnswerD = document.createElement('button');
+        q5AnswerD.setAttribute('id', 'correct-answer')
+        q5AnswerD.addEventListener('click', function() {
+            alert('Correct!');
+            toFinalScore();
+        });
+
+
+
+    q5AnswerA.textContent = 'saveLocal()';
+    q5AnswerB.textContent = 'getItem()';
+    q5AnswerC.textContent = 'notThisOne()';
+    q5AnswerD.textContent = 'setItem()';
+
+
+    quizSection.appendChild(q5AnswerA);
+    quizSection.appendChild(q5AnswerB);
+    quizSection.appendChild(q5AnswerC);
+    quizSection.appendChild(q5AnswerD);    
 };
 
 
 var toQ4 = function() {
-    alert('toQ2');
+    // remove last question
+     quizSection.innerHTML = '';
+
+     // create 2nd question
+     var q4 = document.createElement('section');
+     q4.className = 'quizQuestion'
+     q4.textContent = 'If you want to querry select by id, you must include a(n):';          // update with 1st question as string
+     
+     // display question
+     quizSection.appendChild(q4); 
+     
+     
+     // create 1st question answer choices
+     var q4AnswerA = document.createElement('button');
+         q4AnswerA.setAttribute('id', 'wrong-answer')
+         q4AnswerA.addEventListener('click', function() {
+             alert('Wrong!');
+         });
+ 
+     var q4AnswerB = document.createElement('button');
+         q4AnswerB.setAttribute('id', 'correct-answer')
+         q4AnswerB.addEventListener('click', function() {
+             alert('Correct!');
+             toQ5();
+         });
+ 
+     var q4AnswerC = document.createElement('button');
+         q4AnswerC.setAttribute('id', 'wrong-answer')
+         q4AnswerC.addEventListener('click', function() {
+             alert('Wrong!');
+         });
+ 
+     var q4AnswerD = document.createElement('button');
+         q4AnswerD.setAttribute('id', 'wrong-answer')
+         q4AnswerD.addEventListener('click', function() {
+             alert('Wrong!');
+         });
+ 
+ 
+ 
+     q4AnswerA.textContent = '*';
+     q4AnswerB.textContent = '#';
+     q4AnswerC.textContent = '!';
+     q4AnswerD.textContent = '&';
+  
+ 
+     quizSection.appendChild(q4AnswerA);
+     quizSection.appendChild(q4AnswerB);
+     quizSection.appendChild(q4AnswerC);
+     quizSection.appendChild(q4AnswerD);
+
 };
 
 
 
 var toQ3 = function() {
-    alert('toQ3');
-};
+     // remove last question
+     quizSection.innerHTML = '';
 
-
-
-
-
-
+     // create 2nd question
+     var q3 = document.createElement('section');
+     q3.className = 'quizQuestion'
+     q3.textContent = '3. In web development, we refer to the observation of an event as a(n):';          // update with 1st question as string
+     
+     // display question
+     quizSection.appendChild(q3); 
+     
+     
+     // create answer choices
+     var q3AnswerA = document.createElement('button');
+         q3AnswerA.setAttribute('id', 'wrongAnswer')
+         q3AnswerA.addEventListener('click', function() {
+             alert('Wrong!');
+         });
+ 
+     var q3AnswerB = document.createElement('button');
+         q3AnswerB.setAttribute('id', 'wrongAnswer')
+         q3AnswerB.addEventListener('click', function() {
+             alert('Wrong!');
+         });
+ 
+     var q3AnswerC = document.createElement('button');
+         q3AnswerC.setAttribute('id', 'wrongAnswer')
+         q3AnswerC.addEventListener('click', function() {
+             alert('Wrong!');
+         });
+ 
+     var q3AnswerD = document.createElement('button');
+         q3AnswerD.setAttribute('id', 'correctAnswer')
+         q3AnswerD.addEventListener('click', function() {
+             alert('Correct!');
+             toQ4();
+         });
+ 
+ 
+ 
+     q3AnswerA.textContent = 'Event';
+     q3AnswerB.textContent = 'hover';
+     q3AnswerC.textContent = 'Event handler';
+     q3AnswerD.textContent = 'Event listener';
+  
+ 
+     quizSection.appendChild(q3AnswerA);
+     quizSection.appendChild(q3AnswerB);
+     quizSection.appendChild(q3AnswerC);
+     quizSection.appendChild(q3AnswerD);
+ };
 
 
 
 
 var toQ2 = function() {
-    alert('toQ2');
-    
     // remove last question
     quizSection.innerHTML = '';
 
     // create 2nd question
-    var next= document.createElement('button');
-    next.textContent = 'next';
-    quizSection.appendChild(next); 
-    next.addEventListener('click', toQ3);
+    var q2 = document.createElement('section');
+    q2.className = 'quizQuestion'
+    q2.textContent = '2. Which method creates DOM element objects?';          // update with 1st question as string
+    
+    // display question
+    quizSection.appendChild(q2); 
+    
+    
+    // create question answer choices
+    var q2AnswerA = document.createElement('button');
+        q2AnswerA.setAttribute('id', 'correct-answer')
+        q2AnswerA.addEventListener('click', function() {
+            alert('Correct!');
+            toQ3();
+        });
 
-    /* Left off here, want to contiue dynamically adding buttons that
-    get me through to the end of 5 multiple choice questions.
-    I know there is a way to compress this functionality with for/while loops
-    and arrays, but I am just not there yet. Still grasping how to set and
-    call variables for page mechanics */
+    var q2AnswerB = document.createElement('button');
+        q2AnswerB.setAttribute('id', 'wrong-answer')
+        q2AnswerB.addEventListener('click', function() {
+            alert('Wrong!');
+        });
+
+    var q2AnswerC = document.createElement('button');
+        q2AnswerC.setAttribute('id', 'wrong-answer')
+        q2AnswerC.addEventListener('click', function() {
+            alert('Wrong!');
+        });
+
+    var q2AnswerD = document.createElement('button');
+        q2AnswerD.setAttribute('id', 'wrong-answer')
+        q2AnswerD.addEventListener('click', function() {
+            alert('Wrong!');
+        });
+
+
+
+    q2AnswerA.textContent = '.createElement()';
+    q2AnswerB.textContent = '.querrySelector()';
+    q2AnswerC.textContent = '.false()';
+    q2AnswerD.textContent = 'var';
+ 
+
+    quizSection.appendChild(q2AnswerA);
+    quizSection.appendChild(q2AnswerB);
+    quizSection.appendChild(q2AnswerC);
+    quizSection.appendChild(q2AnswerD);
 };
+    
+
+
 
 
 
@@ -59,45 +246,45 @@ var startQuiz = function () {
 
     // create 1st question
     var q1 = document.createElement('section');
-    q1.className = 'quiz-section';
-    q1.textContent = quizQuestions[0]; 
+    q1.className = 'quizQuestion';
+    q1.textContent = '1. A function that has been passed into a function is called a(n):';          // update with 1st question as string
     
-    // display 1st question in place of star screen
+    // display 1st question 
     quizSection.appendChild(q1);
 
 
     // create 1st question answer choices
     var q1AnswerA = document.createElement('button');
-        q1AnswerA.setAttribute('id', 'correctAnswer1')
+        q1AnswerA.setAttribute('id', 'correct-answer')
         q1AnswerA.addEventListener('click', function() {
-            alert('correct!');
+            alert('Correct!');
             toQ2();
         });
 
     var q1AnswerB = document.createElement('button');
-        q1AnswerB.setAttribute('id', 'wrongAnswer1')
+        q1AnswerB.setAttribute('id', 'wrong-answer')
         q1AnswerB.addEventListener('click', function() {
             alert('Wrong!');
         });
 
     var q1AnswerC = document.createElement('button');
-        q1AnswerC.setAttribute('id', 'wrongAnswer1')
+        q1AnswerC.setAttribute('id', 'wrong-answer')
         q1AnswerC.addEventListener('click', function() {
             alert('Wrong!');
         });
 
     var q1AnswerD = document.createElement('button');
-        q1AnswerD.setAttribute('id', 'wrongAnswer1')
+        q1AnswerD.setAttribute('id', 'wrong-answer')
         q1AnswerD.addEventListener('click', function() {
             alert('Wrong!');
         });
 
 
 
-    q1AnswerA.textContent = 'answer A';
-    q1AnswerB.textContent = 'answer B';
-    q1AnswerC.textContent = 'answer C';
-    q1AnswerD.textContent = 'answer D';
+    q1AnswerA.textContent = 'callback function';
+    q1AnswerB.textContent = 'bio-hazard';
+    q1AnswerC.textContent = 'variable';
+    q1AnswerD.textContent = 'DOM';
  
 
     quizSection.appendChild(q1AnswerA);
