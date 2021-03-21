@@ -5,6 +5,32 @@ var correctAnswer1 = document.getElementById('')
 
 
 
+var timer = function () {
+    var minute = 4;
+    var second = 60
+
+    setInterval(function() {
+        if (minute == 0 && second == 1) {
+            document.querySelector('#timer').innerHTML = '00:00';
+        } else {
+            second--;
+
+            if(second == 0) {
+                minute--;
+                second = 60;
+
+                if(minute == 0) {
+                    minute = minute;
+                }
+            }
+        }
+
+        document.querySelector('#timer').innerHTML = minute + ':' + second;
+    }, 1000);
+} 
+
+
+
 
 var toFinalScore = function() {
     alert('Final Score');
@@ -28,24 +54,28 @@ var toQ5 = function() {
 
     // create 1st question answer choices
     var q5AnswerA = document.createElement('button');
+        q5AnswerA.className = 'btn';
         q5AnswerA.setAttribute('id', 'wrong-answer')
         q5AnswerA.addEventListener('click', function() {
             alert('Wrong!');
         });
 
     var q5AnswerB = document.createElement('button');
+        q5AnswerB.className = 'btn';
         q5AnswerB.setAttribute('id', 'wrongAnswer1')
         q5AnswerB.addEventListener('click', function() {
             alert('Wrong!');
         });
 
     var q5AnswerC = document.createElement('button');
+        q5AnswerC.className = 'btn';
         q5AnswerC.setAttribute('id', 'wrong-answer')
         q5AnswerC.addEventListener('click', function() {
             alert('Wrong!');
         });
 
     var q5AnswerD = document.createElement('button');
+        q5AnswerD.className = 'btn';
         q5AnswerD.setAttribute('id', 'correct-answer')
         q5AnswerD.addEventListener('click', function() {
             alert('Correct!');
@@ -82,12 +112,14 @@ var toQ4 = function() {
      
      // create 1st question answer choices
      var q4AnswerA = document.createElement('button');
+         q4AnswerA.className = 'btn';
          q4AnswerA.setAttribute('id', 'wrong-answer')
          q4AnswerA.addEventListener('click', function() {
              alert('Wrong!');
          });
  
      var q4AnswerB = document.createElement('button');
+         q4AnswerB.className = 'btn';
          q4AnswerB.setAttribute('id', 'correct-answer')
          q4AnswerB.addEventListener('click', function() {
              alert('Correct!');
@@ -95,12 +127,14 @@ var toQ4 = function() {
          });
  
      var q4AnswerC = document.createElement('button');
+         q4AnswerC.className = 'btn';
          q4AnswerC.setAttribute('id', 'wrong-answer')
          q4AnswerC.addEventListener('click', function() {
              alert('Wrong!');
          });
  
      var q4AnswerD = document.createElement('button');
+         q4AnswerD.className = 'btn';
          q4AnswerD.setAttribute('id', 'wrong-answer')
          q4AnswerD.addEventListener('click', function() {
              alert('Wrong!');
@@ -138,24 +172,28 @@ var toQ3 = function() {
      
      // create answer choices
      var q3AnswerA = document.createElement('button');
+         q3AnswerA.className = 'btn';
          q3AnswerA.setAttribute('id', 'wrongAnswer')
          q3AnswerA.addEventListener('click', function() {
              alert('Wrong!');
          });
  
      var q3AnswerB = document.createElement('button');
+         q3AnswerB.className = 'btn';
          q3AnswerB.setAttribute('id', 'wrongAnswer')
          q3AnswerB.addEventListener('click', function() {
              alert('Wrong!');
          });
  
      var q3AnswerC = document.createElement('button');
+         q3AnswerC.className = 'btn';
          q3AnswerC.setAttribute('id', 'wrongAnswer')
          q3AnswerC.addEventListener('click', function() {
              alert('Wrong!');
          });
  
      var q3AnswerD = document.createElement('button');
+         q3AnswerD.className = 'btn';
          q3AnswerD.setAttribute('id', 'correctAnswer')
          q3AnswerD.addEventListener('click', function() {
              alert('Correct!');
@@ -194,6 +232,7 @@ var toQ2 = function() {
     
     // create question answer choices
     var q2AnswerA = document.createElement('button');
+        q2AnswerA.className = 'btn';
         q2AnswerA.setAttribute('id', 'correct-answer')
         q2AnswerA.addEventListener('click', function() {
             alert('Correct!');
@@ -201,18 +240,21 @@ var toQ2 = function() {
         });
 
     var q2AnswerB = document.createElement('button');
+        q2AnswerB.className = 'btn';
         q2AnswerB.setAttribute('id', 'wrong-answer')
         q2AnswerB.addEventListener('click', function() {
             alert('Wrong!');
         });
 
     var q2AnswerC = document.createElement('button');
+        q2AnswerC.className = 'btn';
         q2AnswerC.setAttribute('id', 'wrong-answer')
         q2AnswerC.addEventListener('click', function() {
             alert('Wrong!');
         });
 
     var q2AnswerD = document.createElement('button');
+        q2AnswerD.className = 'btn';
         q2AnswerD.setAttribute('id', 'wrong-answer')
         q2AnswerD.addEventListener('click', function() {
             alert('Wrong!');
@@ -255,6 +297,7 @@ var startQuiz = function () {
 
     // create 1st question answer choices
     var q1AnswerA = document.createElement('button');
+        q1AnswerA.className = 'btn';
         q1AnswerA.setAttribute('id', 'correct-answer')
         q1AnswerA.addEventListener('click', function() {
             alert('Correct!');
@@ -262,18 +305,21 @@ var startQuiz = function () {
         });
 
     var q1AnswerB = document.createElement('button');
+        q1AnswerB.className = 'btn';
         q1AnswerB.setAttribute('id', 'wrong-answer')
         q1AnswerB.addEventListener('click', function() {
             alert('Wrong!');
         });
 
     var q1AnswerC = document.createElement('button');
+        q1AnswerC.className = 'btn';
         q1AnswerC.setAttribute('id', 'wrong-answer')
         q1AnswerC.addEventListener('click', function() {
             alert('Wrong!');
         });
 
     var q1AnswerD = document.createElement('button');
+        q1AnswerD.className = 'btn';
         q1AnswerD.setAttribute('id', 'wrong-answer')
         q1AnswerD.addEventListener('click', function() {
             alert('Wrong!');
@@ -296,3 +342,4 @@ var startQuiz = function () {
 
 
 startQuizBtnEl.addEventListener('click', startQuiz);
+startQuizBtnEl.addEventListener('click', timer);
